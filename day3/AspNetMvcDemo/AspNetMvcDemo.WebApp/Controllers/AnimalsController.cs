@@ -86,7 +86,7 @@ namespace AspNetMvcDemo.WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("AnimalId,Name,NumberOfLegs,Weight,IsItCute,Length")] Animal animal)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Length,AnimalId,Name,NumberOfLegs,Weight,Colour,IsItCute")] Animal animal)
         {
             if (id != animal.AnimalId)
             {

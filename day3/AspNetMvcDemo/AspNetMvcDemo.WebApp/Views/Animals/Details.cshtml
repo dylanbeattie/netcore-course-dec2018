@@ -4,44 +4,9 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>Animal</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.NumberOfLegs)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.NumberOfLegs)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Weight)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Weight)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.IsItCute)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.IsItCute)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Length)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Length)
-        </dd>
-    </dl>
-</div>
+<h2>@Model.Name</h2>
+<p><em>(@Model.NumberOfLegs legs; @Model.Colour)</em></p>
+<p>@Model.Name  weighs @Model.Weight kg and is @(Model.IsItCute ? "extremely" : "definitely not") cute!</p>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.AnimalId">Edit</a> |
     <a asp-action="Index">Back to List</a>

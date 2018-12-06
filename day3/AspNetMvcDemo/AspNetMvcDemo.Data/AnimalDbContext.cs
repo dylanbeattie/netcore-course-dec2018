@@ -7,6 +7,7 @@ namespace AspNetMvcDemo.Data {
     public class AnimalDbContext : DbContext {
 
         public AnimalDbContext(DbContextOptions<AnimalDbContext> options) : base(options) {
+            EnableLogging();
             
         }
         

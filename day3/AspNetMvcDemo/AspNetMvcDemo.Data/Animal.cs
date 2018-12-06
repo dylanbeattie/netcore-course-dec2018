@@ -9,8 +9,10 @@ namespace AspNetMvcDemo.Data {
         public string Name { get; set; }
         public int NumberOfLegs { get; set; }
         public decimal Weight { get; set; }
-        public bool IsItCute { get; set; }
 
+        public string Colour { get; set; }
+        public bool IsItCute { get; set; }
+   
         public decimal Length { get; set; }
 
         public void EatFood(IAmEdible meal) {
