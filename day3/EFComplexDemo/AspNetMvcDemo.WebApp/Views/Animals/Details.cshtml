@@ -1,0 +1,13 @@
+﻿@model AspNetMvcDemo.Data.Animal
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>@Model.Name</h2>
+<p><em>(@Model.NumberOfLegs legs; @Model.Colour)</em></p>
+<p>@Model.Name  weighs @Model.Weight kg and is @(Model.IsItCute ? "extremely" : "definitely not") cute!</p>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.AnimalId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
