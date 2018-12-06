@@ -7,8 +7,12 @@ namespace AspNetMvcDemo.ConsoleApp
     {
         static void Main(string[] args)
         {
-            var animal = new Animal { Name = "Lionel" };
-            Console.WriteLine("Hello World!");
+            using (var db = new AnimalDbContext()) {
+                foreach(var animal in db.Animals) {
+                    Console.WriteLine(animal);
+                }
+            }
+            Console.ReadKey();
         }
     }
 }

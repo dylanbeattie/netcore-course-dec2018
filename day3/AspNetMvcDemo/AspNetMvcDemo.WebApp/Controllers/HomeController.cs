@@ -7,8 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using AspNetMvcDemo.WebApp.Models;
 using AspNetMvcDemo.Data;
 
-namespace AspNetMvcDemo.WebApp.Controllers
-{
+namespace AspNetMvcDemo.WebApp.Controllers {
     public class HomeController : Controller
     {
         public IActionResult Index()
