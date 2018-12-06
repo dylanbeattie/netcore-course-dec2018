@@ -1,4 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using System;
 
 namespace EFDemo1.DataModel {
     public class AnimalDbContext : DbContext {
@@ -11,6 +15,15 @@ namespace EFDemo1.DataModel {
             base.OnConfiguring(optionsBuilder);
 
             optionsBuilder.UseSqlServer(CONNECTION_STRING);
+        }
+
+        // THIS REQUIRES:
+        // install-package Microsoft.Extensions.DependencyInjection
+        // install-package Microsoft.Extensions.Logging.Console
+        public void EnableLogging() {
+            var provider = this.GetInfrastructure<IServiceProvider>();
+            ILoggerFactory factory = provider.GetService<ILoggerFactory>();            
+            factory.AddConsole(LogLevel.Information);
         }
     }
 }

@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EFDemo1.DataModel\EFDemo1.DataModel.csproj" />
+    <ProjectReference Include="..\AspNetMvcDemo.Data\AspNetMvcDemo.Data.csproj" />
   </ItemGroup>
 
 </Project>

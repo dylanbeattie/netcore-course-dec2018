@@ -1,0 +1,10 @@
+﻿@model EFDemo1.WebApplication.Models.HelloViewModel
+@{
+    ViewData["Title"] = "Hello";
+}
+<h1>@Model.MessageOfTheDay</h1>
+<ul>
+    @foreach (var greeting in Model.PersonalisedGreetings) {
+        <li>@greeting.Salutation, @greeting.Name</li>
+    }
+</ul>
