@@ -23,14 +23,14 @@ namespace AspNetMvcDemo.ConsoleApp {
                 //bono.Join(u2);
                 //edge.Join(u2);
                 //db.SaveChanges();
-                var dave = new Musician { NationalInsuranceNumber = "FF12345F", Name = "Dave Grohl", DateOfBirth = new DateTime(1970, 1, 1) };
-                var fooFighters = new Band { Name = "Foo Fighters" };
-                var qotsa = new Band { Name = "Queens of the Stone Age" };
-                db.Musicians.Add(dave);
+                //var dave = new Musician { NationalInsuranceNumber = "FF12345F", Name = "Dave Grohl", DateOfBirth = new DateTime(1970, 1, 1) };
+                //var fooFighters = new Band { Name = "Foo Fighters" };
+                //var qotsa = new Band { Name = "Queens of the Stone Age" };
+                //db.Musicians.Add(dave);
 
-                dave.Join(fooFighters);
-                dave.Join(qotsa);
-                db.SaveChanges();
+                //dave.Join(fooFighters);
+                //dave.Join(qotsa);
+                //db.SaveChanges();
 
                 var bands = db.Bands.ToList();
                 var musicians = db.Musicians.ToList();
